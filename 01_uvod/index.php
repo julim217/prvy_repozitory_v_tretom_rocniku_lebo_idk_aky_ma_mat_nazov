@@ -9,5 +9,10 @@
     <?php
     echo "toto je v uvodzovkach";
     ?>
+    <?php 
+    echo "<p> tento kod je vo vnutri php </p>";
+    print("aj toto je moj vypis pomocou funkcie print");
+    ?>
+
 </body>
 </html>
