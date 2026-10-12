@@ -78,6 +78,46 @@
         }else {
             echo "známka: 5";
         }
+
+        echo "</br>";
+        //úloha na precvičenie si podmienok 2
+        /*
+        vstup na párty:
+        vstup na party je podmieneny niekolkými podmienkami
+        1) vstup je povoleny od 18 rokov
+        2) pokial je party v SNV tak od 15 rokov
+        3) ak nemate slusne oblecenie tak smola
+        4) ak si bol v base tak mas zakaz vstupu na party
+        5) ak mate suhlas zakonneho zastupcu tak vstup od 10 rokov
+        */
+
+        $mojVek = 31;
+        echo "</br>";
+        $miestoParty = "Poprad";
+        echo "</br>";
+        $slusneOblecenie = true;
+        echo "</br>";
+        $suhlas = false;
+        echo "</br>";
+        $basa = false;
+        echo "</br>";
+
+     
+
+        
+        if($slusneOblecenie == true || $basa == false){
+            if($mojVek >= 18 ){
+             echo "Go party!";
+            }else if($miestoParty == "SNV" && $mojVek >= 15) {
+            echo "Go party!";
+            }else if($suhlas == true && $mojVek >=10){
+            echo "Go party!";
+            }else{
+                echo "Smolaaaa!";
+            }
+        }
+
+        echo "</br>";
     ?>
 </body>
 </html>
