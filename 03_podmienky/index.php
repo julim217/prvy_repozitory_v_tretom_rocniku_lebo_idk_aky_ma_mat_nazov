@@ -38,7 +38,7 @@
         === : porovnáva hodnotu aj dátový typ (2===2):pravda | (2 !== "2"):nepravda
         */
 
-        if($cislo1 != $cislo2;){
+        if($cislo1 != $cislo2){
             echo "Toto sa vykoná";
         }
 
@@ -52,8 +52,32 @@
 
         //úloha na precvičenie si podmienok
         /*
-        
+        vytvorte podmienku kt bude na zaklade poctu bodov vypisovat vase hodnotenie
+        100-90% = 1
+        89-80 = 2
+        ...
+
+        BONUS: pocet bodov bude def nahodne pomocou funkcie random_int(min, max);
         */
+
+        echo "</br>";
+
+        $pocetBodov = random_int(0, 100);
+
+        echo "počet bodov: $pocetBodov";
+        echo "</br>";
+
+        if($pocetBodov >= 90){
+            echo "známka: 1";
+        }else if($pocetBodov >= 80){
+            echo "známka: 2";
+        }else if($pocetBodov >= 70){
+            echo "známka: 3";
+        }else if($pocetBodov >= 60){
+            echo "známka: 4";
+        }else {
+            echo "známka: 5";
+        }
     ?>
 </body>
 </html>
