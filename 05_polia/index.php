@@ -64,7 +64,7 @@
     }
 
     if($nahodnyznak2 == 1 || $nahodnyznak2 == 3){
-        $farba1 = "red";
+        $farba1 + = "red";
     }else{
         $farba2 = "black";
     }
@@ -95,7 +95,10 @@
       echo "Hráč $i.: " . "
       <span style = 'color: $farba1;'>{$prvaKarta} {$znaky[$nahodnyznak1]}</span> 
       <span style = 'color: $farab2;'>{$druhaKarta} {$znaky[$nahodnyznak2]}</span}
-       " . "</br>";
+       " . "";
+
+       echo "</br>";
+
     }
     
 ?>
