@@ -19,6 +19,8 @@
     napriklad $ovocie ["pomaranc", "mandarinka", "slivka"]
 
     pole $ovocie obsahuje tri hodnoty, index hodnoty pomaranc je 0
+
+    v jazyku PHP sa pole definuje pomocou funkcie array()
     */
 
    //_______________________________________________________________________________________
@@ -41,6 +43,9 @@
     $kartaQ = 'Q';
     $kartaK = 'K';
     $kartaA = 'A';
+
+    $znaky = array('♠', '♥', '♣', '♦');
+
 
     for($i = 1; $i <= 6; $i++){
       $prvaKarta = rand(2, 14);
