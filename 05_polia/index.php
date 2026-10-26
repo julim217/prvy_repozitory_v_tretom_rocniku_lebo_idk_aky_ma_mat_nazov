@@ -43,6 +43,9 @@
     $kartaQ = 'Q';
     $kartaK = 'K';
     $kartaA = 'A';
+    $farba1 = "";
+    $farba2 = "";
+
 
     $znaky = array('♠', '♥', '♣', '♦');
 
@@ -50,6 +53,21 @@
     for($i = 1; $i <= 6; $i++){
       $prvaKarta = rand(2, 14);
       $druhaKarta = rand(2, 14);
+
+      $nahodnyznak1 = rand(0,3);
+      $nahodnyznak2 = rand(0,3);
+
+    if($nahodnyznak1 == 1 || $nahodnyznak1 == 3){
+        $farba1 = "red";
+    }else{
+        $farba2 = "black";
+    }
+
+    if($nahodnyznak2 == 1 || $nahodnyznak2 == 3){
+        $farba1 = "red";
+    }else{
+        $farba2 = "black";
+    }
 
       if($prvaKarta == 11){
         $prvaKarta = $kartaJ;
@@ -71,9 +89,15 @@
         $druhaKarta = $kartaA;
       }
 
+      
 
-      echo "Hráč $i.: " . "{$prvaKarta} {$druhaKarta} " . "</br>";
+
+      echo "Hráč $i.: " . "
+      <span style = 'color: $farba1;'>{$prvaKarta} {$znaky[$nahodnyznak1]}</span> 
+      <span style = 'color: $farab2;'>{$druhaKarta} {$znaky[$nahodnyznak2]}</span}
+       " . "</br>";
     }
+    
 ?>
 </body>
 </html>
