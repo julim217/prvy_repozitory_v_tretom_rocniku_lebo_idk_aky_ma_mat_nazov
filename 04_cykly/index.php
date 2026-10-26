@@ -42,8 +42,40 @@
 
     4 znaky - ♠ (čierna), ♥ (červená), ♣ (čierna), ♦ (červená)
     */
+
+    $prvaKarta = 0;
+    $druhaKarta = 0;
+    $kartaJ = 'J';          //iba jeden znak davame do ''
+    $kartaQ = 'Q';
+    $kartaK = 'K';
+    $kartaA = 'A';
+
     for($i = 1; $i <= 6; $i++){
-      echo "Hráč $i: " . "</br>";
+      $prvaKarta = rand(2, 14);
+      $druhaKarta = rand(2, 14);
+
+      if($prvaKarta == 11){
+        $prvaKarta = $kartaJ;
+      }else if ($prvaKarta == 12){
+        $prvaKarta = $kartaQ;
+      }else if ($prvaKarta == 13){
+        $prvaKarta = $kartaK;
+      }else if ($prvaKarta == 14){
+        $prvaKarta = $kartaA;
+      }
+
+      if($druhaKarta == 11){
+        $druhaarta = $kartaJ;
+      }else if ($druhaKarta == 12){
+        $druhaKarta = $kartaQ;
+      }else if ($druhaKarta == 13){
+        $druhaarta = $kartaK;
+      }else if ($druhaKarta == 14){
+        $druhaKarta = $kartaA;
+      }
+
+
+      echo "Hráč $i.: " . "{$prvaKarta} {$druhaKarta} " . "</br>";
     }
 
 
