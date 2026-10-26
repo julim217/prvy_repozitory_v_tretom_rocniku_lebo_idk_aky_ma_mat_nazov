@@ -78,7 +78,7 @@
       echo "Hráč $i.: " . "{$prvaKarta} {$druhaKarta} " . "</br>";
     }
 
-
+      // pokracovanie v 05_polia-index.php
 
     ?>
 </body>
