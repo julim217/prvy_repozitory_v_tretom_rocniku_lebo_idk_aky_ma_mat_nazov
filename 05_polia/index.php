@@ -6,24 +6,29 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-    // POLIA
-    /*
-    Pole je premenna, kt. si dokaze uchovat viacero hodnot. 
-    Kazda hodnota v poli je indexovana. 
 
-    Indexovanie je jedinecne priradenie cisla k hodnote. 
-    Indexovanie standartne fungue od 0 po nekonecno (resp. po pocet prvkov v nasom poli).
+<?php
+// Polia
 
-    Pole sa v programovani (roznych jazykoch) oznacuje ako [] -- alt gr F
-    napriklad $ovocie ["pomaranc", "mandarinka", "slivka"]
+/*
+Pole je premenná, ktorá si dokáže uchovať viacero hodnôt.
+Každá hodnota v poli je indcexovaná. 
 
-    pole $ovocie obsahuje tri hodnoty, index hodnoty pomaranc je 0
+Indexovanie je jedinečné priradenie čísla k hodnote.
+Indexovanie štandardne funguje od 0 po nekonečno.
+(resp. po počet prvkov v našom poli)
 
-    v jazyku PHP sa pole definuje pomocou funkcie array()
-    */
+Pole sa v programovaní (rôznych jazykoch) označuje
+ako []. 
+Napríklad $ovocie["pomaranč", "mandarinka", "slivka"]
 
-   //_______________________________________________________________________________________
+Pole $ovocie obsahuje 3 hodnoty.
+Index hodnoty pomaranč je 0.
+
+V Jazyku PHP sa pole definuje pomocou funkcie array()
+
+*/
+
 
     /*
     do while úloha:
@@ -36,71 +41,45 @@
 
     4 znaky - ♠ (čierna), ♥ (červená), ♣ (čierna), ♦ (červená)
     */
-
     $prvaKarta = 0;
     $druhaKarta = 0;
-    $kartaJ = 'J';          //iba jeden znak davame do ''
+    $kartaJ = 'J'; // "Toto je string" 'J' (znak)
     $kartaQ = 'Q';
     $kartaK = 'K';
     $kartaA = 'A';
-    $farba1 = "";
-    $farba2 = "";
 
-
-    $znaky = array('♠', '♥', '♣', '♦');
-
+    $znaky = array('♠','♥', '♣', '♦');
 
     for($i = 1; $i <= 6; $i++){
       $prvaKarta = rand(2, 14);
       $druhaKarta = rand(2, 14);
 
-      $nahodnyznak1 = rand(0,3);
-      $nahodnyznak2 = rand(0,3);
-
-    if($nahodnyznak1 == 1 || $nahodnyznak1 == 3){
-        $farba1 = "red";
-    }else{
-        $farba2 = "black";
-    }
-
-    if($nahodnyznak2 == 1 || $nahodnyznak2 == 3){
-        $farba1 + = "red";
-    }else{
-        $farba2 = "black";
-    }
+      $nahodnyZnak1 = rand(0, 3);
+      $nahodnyZnak2 = rand(0, 3);
 
       if($prvaKarta == 11){
         $prvaKarta = $kartaJ;
-      }else if ($prvaKarta == 12){
+      }elseif($prvaKarta == 12){
         $prvaKarta = $kartaQ;
-      }else if ($prvaKarta == 13){
+      }elseif($prvaKarta == 13){
         $prvaKarta = $kartaK;
-      }else if ($prvaKarta == 14){
+      }elseif($prvaKarta == 14){
         $prvaKarta = $kartaA;
       }
-
       if($druhaKarta == 11){
-        $druhaarta = $kartaJ;
-      }else if ($druhaKarta == 12){
+        $druhaKarta = $kartaJ;
+      }elseif($druhaKarta == 12){
         $druhaKarta = $kartaQ;
-      }else if ($druhaKarta == 13){
-        $druhaarta = $kartaK;
-      }else if ($druhaKarta == 14){
+      }elseif($druhaKarta == 13){
+        $druhaKarta = $kartaK;
+      }elseif($druhaKarta == 14){
         $druhaKarta = $kartaA;
       }
-
-      
-
-
-      echo "Hráč $i.: " . "
-      <span style = 'color: $farba1;'>{$prvaKarta} {$znaky[$nahodnyznak1]}</span> 
-      <span style = 'color: $farab2;'>{$druhaKarta} {$znaky[$nahodnyznak2]}</span}
-       " . "";
-
-       echo "</br>";
-
+      echo "Hráč $i. " . "{$prvaKarta} {$druhaKarta}" . "</br>";
+      echo "Hráč $i. " . "{$prvaKarta}{$znaky[$nahodnyZnak1]} {$druhaKarta}{$znaky[$nahodnyZnak2]}" . "</br>";
     }
-    
 ?>
+
 </body>
 </html>
+~
